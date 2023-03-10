@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    
+  }
+
+header, .page__top--title {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.container__functionning h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.container__functionning--button {
+    width: 15%;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+  }
+
+.container__restaurants {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__restaurants--cards {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 50px;
+    width: 30% 
+}
+  
+
