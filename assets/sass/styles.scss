@@ -1,0 +1,17 @@
+// Base Importation
+@import "./base/base";
+
+// Components Importation
+@import "./components/button";
+
+// layouts Importation
+@import "./layouts/_navbar.scss";
+@import"./layouts/_footer";
+
+// Pages Importation
+@import "./pages/home";
+@import "./pages/lapalettedugout";
+
+// Utils Importation
+@import "./utils/variables";
+@import "./utils/_mixins.scss";
