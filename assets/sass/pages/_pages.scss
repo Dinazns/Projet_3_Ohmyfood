@@ -1,7 +1,7 @@
 header nav{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     position: relative;
 
     i {
@@ -16,11 +16,16 @@ header img {
     width: 100%;
 }
 
+.img {
+    object-fit: cover;
+    max-height: 500px;
+}
+
 main {
     background-color: #eaeaea;
 }
 
-.container_lapalettedugout {
+.container_allmenu {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -33,7 +38,7 @@ main {
     background-color: #eaeaea;
     gap: 30px;
 
-    .container_lapalettedugout--top {
+    .container_allmenu--top {
         display: flex;
         flex-direction: row;
         align-items: center;
