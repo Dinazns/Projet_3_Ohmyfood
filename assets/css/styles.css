@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Roboto", "Shrikhand", sans-serif;
 }
 
@@ -42,6 +43,7 @@ nav a img {
 footer {
   display: flex;
   flex-direction: column;
+  position: static;
   padding: 20px 20px 20px;
   gap: 10px;
   background-color: #353535;
@@ -225,6 +227,100 @@ header .page__top--title p {
   color: #008766;
   font-family: "roboto";
   font-weight: 500;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+header nav i {
+  position: absolute;
+  left: -55px;
+  color: #353535;
+  font-size: 20px;
+}
+
+header img {
+  width: 100%;
+}
+
+main {
+  background-color: #eaeaea;
+}
+
+.container_lapalettedugout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  top: -34px;
+  padding: 30px 20px 30px;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  background-color: #eaeaea;
+  gap: 30px;
+}
+.container_lapalettedugout .container_lapalettedugout--top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  position: static;
+}
+.container_lapalettedugout .container_lapalettedugout--top h2 {
+  font-family: "Shrikhand";
+  font-weight: 500;
+  font-size: 25px;
+}
+.container_lapalettedugout .container_lapalettedugout--top i {
+  font-size: 25px;
+}
+.container_lapalettedugout .container_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+.container_lapalettedugout .container_menu .container_menu--bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.container_lapalettedugout .container_menu .container_menu--bloc h3 {
+  font-family: "roboto";
+  font-size: 300;
+  width: 1.3cm;
+  border-bottom: 3px solid #99e2d0;
+}
+.container_lapalettedugout .container_menu .container_menu--bloctext {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+  gap: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
+}
+.container_lapalettedugout .container_menu .container_menu--bloctext h4 {
+  font-size: 17px;
+}
+.container_lapalettedugout .container_menu .container_menu--bloctext .price {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-family: "roboto";
+  font-weight: 700;
+}
+
+.bloc_button {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
