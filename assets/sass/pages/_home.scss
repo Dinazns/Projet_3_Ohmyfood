@@ -56,6 +56,8 @@ header {
 }
 
 .container__functionning {
+   background-color: #fff;
+
     h2 {
         padding: 50px 20px 35px;
         font-size: 26px;
@@ -63,22 +65,19 @@ header {
 
 }
 
-.container__functionning--button {
-    margin: 0 auto;
-    padding-bottom: 60px;
-
-    width: 100%;
-
+.container__functionning--button {   
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 30px;
+    width: 100%;
     gap: 30px;
 
     li {
         position: relative;
        
         padding: 30px 25px 30px;
-        max-width: 300px;
+        max-width: 400px;
         width: 100%;
         
         border-radius: 20px;
@@ -148,8 +147,8 @@ header {
         margin-bottom: 30px;
 
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         gap: 30px;
 
         .container__restaurants--cards {

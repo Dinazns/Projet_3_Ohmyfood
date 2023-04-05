@@ -16,5 +16,12 @@
     background: -moz-linear-gradient(163deg, rgba(236,115,218,1) 0%, rgba(156,89,220,1) 100%);
     background: -webkit-linear-gradient(163deg, rgba(236,115,218,1) 0%, rgba(156,89,220,1) 100%);
     background: linear-gradient(163deg, rgba(236,115,218,1) 0%, rgba(156,89,220,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ec73da",endColorstr="#9c59dc",GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ec73da",endColorstr="#9c59dc",GradientType=1);    
+
+    &:hover{
+        opacity: 0.9;
+        box-shadow: 0 5px 10px rgba(10, 10, 10, 0.486);
+    }
+
 }
+

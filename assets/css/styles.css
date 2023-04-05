@@ -31,6 +31,30 @@ li {
   background: linear-gradient(163deg, rgb(236, 115, 218) 0%, rgb(156, 89, 220) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ec73da",endColorstr="#9c59dc",GradientType=1);
 }
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.486);
+}
+
+.container__restaurants--cards-text {
+  position: relative;
+}
+.container__restaurants--cards-text i {
+  position: absolute;
+  right: 30px;
+}
+.container__restaurants--cards-text .fa-solid {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.container__restaurants--cards-text .fa-solid:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(rgb(194, 61, 194), pink);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
 
 nav {
   margin: 0 auto;
@@ -44,13 +68,16 @@ footer {
   display: flex;
   flex-direction: column;
   position: static;
-  padding: 20px 20px 20px;
+  padding: 25px 25px 25px;
   gap: 10px;
   background-color: #353535;
   color: white;
 }
 footer h3 {
-  font-family: "Roboto";
+  font-family: "Shrikhand";
+  font-weight: 300;
+  font-size: 22px;
+  padding-bottom: 15px;
 }
 footer .footer__proposition {
   display: flex;
@@ -58,7 +85,7 @@ footer .footer__proposition {
 }
 footer .footer__partenariat {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 header {
@@ -106,24 +133,26 @@ header .page__top--title p {
   font-size: 20px;
 }
 
+.container__functionning {
+  background-color: #fff;
+}
 .container__functionning h2 {
   padding: 50px 20px 35px;
   font-size: 26px;
 }
 
 .container__functionning--button {
-  margin: 0 auto;
-  padding-bottom: 60px;
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 30px;
+  width: 100%;
   gap: 30px;
 }
 .container__functionning--button li {
   position: relative;
   padding: 30px 25px 30px;
-  max-width: 300px;
+  max-width: 400px;
   width: 100%;
   border-radius: 20px;
   background-color: #f6f6f6;
@@ -178,8 +207,8 @@ header .page__top--title p {
 .container__restaurants .container__restaurants--global {
   margin-bottom: 30px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 .container__restaurants .container__restaurants--global .container__restaurants--cards {
