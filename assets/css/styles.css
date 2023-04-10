@@ -543,6 +543,9 @@ main {
   box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
 }
 .container_allmenu .container_menu .container_menu--bloctext h4, .container_allmenu .container_menu .container_menu--bloctext p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 1s 1.5s ease-out forwards;
