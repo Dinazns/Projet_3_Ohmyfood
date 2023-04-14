@@ -1,0 +1,20 @@
+// Base Importation
+@import "./base/base";
+
+// Utils Importation
+@import "./utils/variables";
+@import "./utils/_mixins.scss";
+
+// Components Importation
+@import "./components/button";
+@import "./components/heartanim";
+@import "./components/greenside";
+
+// layouts Importation
+@import "./layouts/_navbar.scss";
+@import"./layouts/_footer";
+@import"./layouts/loader";
+
+// Pages Importation
+@import "./pages/home";
+@import "./pages/pages";
