@@ -12,12 +12,6 @@ footer{
         font-weight: 300;
         font-size: 22px;
         padding-bottom: 15px;
-
-        @include desktop-only {
-            display: flex;
-          
-            
-        }
     }
 
     .footer__proposition {

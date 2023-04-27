@@ -130,11 +130,6 @@ footer h3 {
   font-size: 22px;
   padding-bottom: 15px;
 }
-@media screen and (min-width: 991px) {
-  footer h3 {
-    display: flex;
-  }
-}
 footer .footer__proposition {
   display: flex;
   gap: 15px;
@@ -496,20 +491,22 @@ header img {
   max-height: 500px;
 }
 
-main {
+.main_pages {
   background-color: #eaeaea;
 }
 @media screen and (min-width: 991px) {
-  main {
+  .main_pages {
     display: flex;
     margin: auto;
+    max-width: 1500px;
     width: 80%;
   }
 }
 @media screen and (min-width: 767px) {
-  main {
+  .main_pages {
     display: flex;
     margin: auto;
+    max-width: 1500px;
     width: 80%;
   }
 }

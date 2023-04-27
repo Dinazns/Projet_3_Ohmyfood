@@ -25,17 +25,19 @@ header img {
     max-height: 500px;
 }
 
-main {
+.main_pages {
     background-color: $clr-primary;
 
     @include desktop-only {
         display: flex;
         margin: auto;
+        max-width: 1500px;
         width: 80%;
     }
     @include tab-only {
         display: flex;
         margin: auto;
+        max-width: 1500px;
         width: 80%;
     }
 }
