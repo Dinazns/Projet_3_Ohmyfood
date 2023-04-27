@@ -469,17 +469,17 @@ header nav {
   flex-direction: row;
   justify-content: center;
   position: relative;
+  width: 100%;
 }
 header nav i {
-  position: absolute;
-  left: -55px;
   color: #353535;
   font-size: 20px;
 }
-@media screen and (min-width: 991px) {
-  header nav i {
-    left: -300%;
-  }
+header nav a i {
+  display: flex;
+  position: absolute;
+  left: 0;
+  padding-left: 35px;
 }
 
 header img {

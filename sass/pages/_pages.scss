@@ -3,16 +3,20 @@ header nav{
     flex-direction: row;
     justify-content: center;
     position: relative;
+    width: 100%;
 
     i {
-        position: absolute;
-        left: -55px;
         color: $clr-dark;
         font-size: 20px;
+    }
 
-        @include desktop-only {
-            left: -300%;
-        }
+    a i {
+        
+            display: flex;
+            position: absolute;
+            left: 0;
+            padding-left: 35px;
+        
     }
 }
 
