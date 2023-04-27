@@ -15,6 +15,7 @@ li {
   list-style: none;
 }
 
+/*couleur utilisé aussi pour le bg du logo*/
 .btn {
   cursor: pointer;
   max-width: 250px;
@@ -118,7 +119,6 @@ nav a img {
 footer {
   display: flex;
   flex-direction: column;
-  position: static;
   padding: 25px 25px 25px;
   gap: 10px;
   background-color: #353535;
@@ -130,6 +130,11 @@ footer h3 {
   font-size: 22px;
   padding-bottom: 15px;
 }
+@media screen and (min-width: 991px) {
+  footer h3 {
+    display: flex;
+  }
+}
 footer .footer__proposition {
   display: flex;
   gap: 15px;
@@ -137,6 +142,14 @@ footer .footer__proposition {
 footer .footer__partenariat {
   display: flex;
   gap: 10px;
+}
+@media screen and (min-width: 991px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 60px 60px 10px;
+  }
 }
 
 .loader {
@@ -290,6 +303,20 @@ header .page__top--title p {
   width: 100%;
   gap: 30px;
 }
+@media screen and (min-width: 767px) {
+  .container__functionning--button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 991px) {
+  .container__functionning--button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .container__functionning--button li {
   position: relative;
   padding: 30px 25px 30px;
@@ -349,23 +376,66 @@ header .page__top--title p {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
+}
+.container__restaurants .container__restaurants--global a {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .container__restaurants .container__restaurants--global a {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 991px) {
+  .container__restaurants .container__restaurants--global a {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container__restaurants .container__restaurants--global {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 991px) {
+  .container__restaurants .container__restaurants--global {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .container__restaurants .container__restaurants--global .container__restaurants--cards {
   display: flex;
   position: relative;
   flex-direction: column;
-  max-width: 400px;
   width: 100%;
-  height: 293px;
   border-radius: 25px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
   gap: 15px;
 }
+@media screen and (min-width: 991px) {
+  .container__restaurants .container__restaurants--global .container__restaurants--cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container__restaurants .container__restaurants--global .container__restaurants--cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
 .container__restaurants .container__restaurants--global .container__restaurants--cards img {
-  max-height: 201px;
+  max-height: 163px;
+  width: 100%;
   object-fit: cover;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -375,7 +445,7 @@ header .page__top--title p {
   justify-content: space-between;
   color: black;
   padding: 5px 25px 20px;
-  width: 310px;
+  width: 100%;
 }
 .container__restaurants .container__restaurants--global .container__restaurants--cards .container__restaurants--cards-text h3 {
   font-size: 22px;
@@ -411,6 +481,11 @@ header nav i {
   color: #353535;
   font-size: 20px;
 }
+@media screen and (min-width: 991px) {
+  header nav i {
+    left: -300%;
+  }
+}
 
 header img {
   width: 100%;
@@ -423,6 +498,20 @@ header img {
 
 main {
   background-color: #eaeaea;
+}
+@media screen and (min-width: 991px) {
+  main {
+    display: flex;
+    margin: auto;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 767px) {
+  main {
+    display: flex;
+    margin: auto;
+    width: 80%;
+  }
 }
 
 .container_allmenu {
@@ -442,8 +531,6 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  position: static;
 }
 .container_allmenu .container_allmenu--top h2 {
   font-family: "Shrikhand";
@@ -451,87 +538,120 @@ main {
   font-size: 25px;
 }
 .container_allmenu .container_allmenu--top i {
+  margin-right: -20px;
   font-size: 25px;
 }
-.container_allmenu .container_menu:nth-child(2) {
+@media screen and (min-width: 991px) {
+  .container_allmenu .container_allmenu--top {
+    display: flex;
+    margin: auto;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container_allmenu .container_allmenu--top {
+    display: flex;
+    margin: auto;
+    width: 30%;
+  }
+}
+
+.container_menu:nth-child(2) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 0.2s 1s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(2) .container_menu--bloc:nth-child(1) {
+.container_menu:nth-child(2) .container_menu--bloc:nth-child(1) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 0.4s 1.2s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(2) .container_menu--bloc:nth-child(2) {
+.container_menu:nth-child(2) .container_menu--bloc:nth-child(2) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 0.6s 1.4s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(2) .container_menu--bloc:nth-child(3) {
+.container_menu:nth-child(2) .container_menu--bloc:nth-child(3) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 0.8s 1.6s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(3) {
+
+.container_menu:nth-child(3) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 1s 1.8s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(3) .container_menu--bloc:nth-child(1) {
+.container_menu:nth-child(3) .container_menu--bloc:nth-child(1) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 1.2s 2s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(3) .container_menu--bloc:nth-child(2) {
+.container_menu:nth-child(3) .container_menu--bloc:nth-child(2) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 1.4s 2.2s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(3) .container_menu--bloc:nth-child(3) {
+.container_menu:nth-child(3) .container_menu--bloc:nth-child(3) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 1.6s 2.4s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(4) {
+
+.container_menu:nth-child(4) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 1.8s 2.6s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(4) .container_menu--bloc:nth-child(1) {
+.container_menu:nth-child(4) .container_menu--bloc:nth-child(1) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 2s 2.8s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(4) .container_menu--bloc:nth-child(2) {
+.container_menu:nth-child(4) .container_menu--bloc:nth-child(2) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 2.2s 3s ease-out forwards;
 }
-.container_allmenu .container_menu:nth-child(4) .container_menu--bloc:nth-child(3) {
+.container_menu:nth-child(4) .container_menu--bloc:nth-child(3) {
   opacity: 0;
   transform: translateY(-15px);
   animation: fadein 2.4s 3.2s ease-out forwards;
 }
-.container_allmenu .container_menu {
+
+.container_menu {
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding-bottom: 20px;
 }
-.container_allmenu .container_menu .container_menu--bloc {
+@media screen and (min-width: 991px) {
+  .container_menu {
+    display: flex;
+    margin: auto;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container_menu {
+    display: flex;
+    margin: auto;
+    width: 70%;
+  }
+}
+.container_menu .container_menu--bloc {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
 }
-.container_allmenu .container_menu .container_menu--bloc h3 {
+.container_menu .container_menu--bloc h3 {
   font-family: "roboto";
   font-size: 300;
   width: 1.3cm;
   border-bottom: 3px solid #99e2d0;
 }
-.container_allmenu .container_menu .container_menu--bloctext {
+.container_menu .container_menu--bloctext {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -542,7 +662,7 @@ main {
   background-color: white;
   box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
 }
-.container_allmenu .container_menu .container_menu--bloctext h4, .container_allmenu .container_menu .container_menu--bloctext p {
+.container_menu .container_menu--bloctext h4, .container_menu .container_menu--bloctext p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -559,10 +679,10 @@ main {
     transform: none;
   }
 }
-.container_allmenu .container_menu .container_menu--bloctext h4 {
+.container_menu .container_menu--bloctext h4 {
   font-size: 17px;
 }
-.container_allmenu .container_menu .container_menu--bloctext .price {
+.container_menu .container_menu--bloctext .price {
   display: flex;
   position: absolute;
   right: 20px;
@@ -575,160 +695,5 @@ main {
   display: flex;
   justify-content: center;
 }
-
-/* header nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-
-    i {
-        position: absolute;
-        left: -55px;
-        color: #353535;
-        font-size: 20px;
-    }
-}
-
-header img {
-    width: 100%;
-}
-
-.img {
-    object-fit: cover;
-    max-height: 500px;
-}
-
-main {
-    background-color: #eaeaea;
-}
-
-.container_allmenu {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;   
-    top: -34px;
-    padding: 30px 20px 30px;
-
-    border-top-right-radius: 35px;
-    border-top-left-radius: 35px;
-    background-color: #eaeaea;
-    gap: 30px;
-
-    .container_allmenu--top {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        position: static;
-
-        h2 {
-            font-family: 'Shrikhand';
-            font-weight: 500;
-            font-size: 25px;
-        }
-
-        i {
-            font-size: 25px;
-        }
-    }
-
-    .container_menu {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        padding-bottom: 20px;
-
-        .container_menu--bloc {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 10px;
-
-
-            h3 {      
-                font-family: 'roboto';
-                font-size: 300;          
-                width: 1.3cm;
-                border-bottom: 3px solid #99e2d0;   
-            }
-        }
-
-        .container_menu--bloctext {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            padding: 10px;
-            border-radius: 20px;
-            gap: 5px;
-            background-color: white; 
-            box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
-
-            animation: fadein 1s 0.2s ease;
-            //transition: opacity 1s ease;
-            //transition-delay: 0.2s; /* délai avant le début de la transition 
-
-            // ajoutez d'autres propriétés CSS si nécessaire
-
-            @keyframes fadein {
-                from{
-                    opacity: 0;
-                }
-                to{
-                    opacity: 1;
-                }
-            }
-
-        // modifier les sélecteurs selon votre structure HTML
-        &:nth-child(1) .container_menu--bloctext {
-            animation-delay: 0.2s;
-
-          }
-
-          &:nth-child(2) .container_menu--bloctext {
-            animation-delay: 0.4s;
-
-          }
-
-          &:nth-child(3) .container_menu--bloctext {
-            animation-delay: 0.6s;
-
-          }
-
-          &:nth-child(4) .container_menu--bloctext {
-            animation-delay: 0.8s;
-
-          }
-
-          &:nth-child(5) .container_menu--bloctext {
-            animation-delay: 1s;
-
-          }
-
-          // ajoutez d'autres sélecteurs si nécessaire
-        }
-
-            h4 {
-                font-size: 17px;
-            }
-
-            .price {
-                display: flex;
-                position: absolute;
-                right: 20px;
-                bottom: 10px;
-                font-family: 'roboto';
-                font-weight: 700;
-            }
-        }
-    }
-
-.bloc_button {
-    display: flex;
-    justify-content: center;
-}
- */
 
 /*# sourceMappingURL=styles.css.map */

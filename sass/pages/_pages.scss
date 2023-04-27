@@ -7,8 +7,12 @@ header nav{
     i {
         position: absolute;
         left: -55px;
-        color: #353535;
+        color: $clr-dark;
         font-size: 20px;
+
+        @include desktop-only {
+            left: -300%;
+        }
     }
 }
 
@@ -22,7 +26,18 @@ header img {
 }
 
 main {
-    background-color: #eaeaea;
+    background-color: $clr-primary;
+
+    @include desktop-only {
+        display: flex;
+        margin: auto;
+        width: 80%;
+    }
+    @include tab-only {
+        display: flex;
+        margin: auto;
+        width: 80%;
+    }
 }
 
 .container_allmenu {
@@ -35,16 +50,14 @@ main {
     
     border-top-right-radius: 35px;
     border-top-left-radius: 35px;
-    background-color: #eaeaea;
+    background-color: $clr-primary;
     gap: 30px;
 
     .container_allmenu--top {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        position: static;
+        justify-content: space-between;  
         
         h2 {
             font-family: 'Shrikhand';
@@ -53,8 +66,22 @@ main {
         }
 
         i {
+            margin-right: -20px;
             font-size: 25px;
         }
+
+        @include desktop-only {
+            display: flex;
+            margin: auto;
+            width: 30%;
+            }
+        @include tab-only {
+            display: flex;
+            margin: auto;
+            width: 30%;
+            }
+        }
+        
     }
 
     .container_menu:nth-child(2) {
@@ -135,6 +162,18 @@ main {
         gap: 15px;
         padding-bottom: 20px;
 
+        
+    @include desktop-only {
+        display: flex;
+        margin: auto;
+        width: 70%;
+        }
+    @include tab-only {
+        display: flex;
+        margin: auto;
+        width: 70%;
+    }    
+
         .container_menu--bloc {
             display: flex;
             flex-direction: column;
@@ -145,7 +184,8 @@ main {
                 font-family: 'roboto';
                 font-size: 300;          
                 width: 1.3cm;
-                border-bottom: 3px solid #99e2d0;   
+                border-bottom: 3px solid $clr-tertiary;
+                ;   
             }
         }
         
@@ -157,7 +197,7 @@ main {
             padding: 10px;
             border-radius: 20px;
             gap: 5px;
-            background-color: white; 
+            background-color: $clr-secondary; 
             box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
             
             h4, p {
@@ -195,167 +235,8 @@ main {
             }
         }
     }
-}
 
 .bloc_button {
     display: flex;
     justify-content: center;
 }
-
-
-/* header nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-
-    i {
-        position: absolute;
-        left: -55px;
-        color: #353535;
-        font-size: 20px;
-    }
-}
-
-header img {
-    width: 100%;
-}
-
-.img {
-    object-fit: cover;
-    max-height: 500px;
-}
-
-main {
-    background-color: #eaeaea;
-}
-
-.container_allmenu {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;   
-    top: -34px;
-    padding: 30px 20px 30px;
-    
-    border-top-right-radius: 35px;
-    border-top-left-radius: 35px;
-    background-color: #eaeaea;
-    gap: 30px;
-
-    .container_allmenu--top {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        position: static;
-        
-        h2 {
-            font-family: 'Shrikhand';
-            font-weight: 500;
-            font-size: 25px;
-        }
-
-        i {
-            font-size: 25px;
-        }
-    }
-      
-    .container_menu {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        padding-bottom: 20px;
-                
-        .container_menu--bloc {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 10px;
-            
-
-            h3 {      
-                font-family: 'roboto';
-                font-size: 300;          
-                width: 1.3cm;
-                border-bottom: 3px solid #99e2d0;   
-            }
-        }
-        
-        .container_menu--bloctext {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            padding: 10px;
-            border-radius: 20px;
-            gap: 5px;
-            background-color: white; 
-            box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
-           
-            animation: fadein 1s 0.2s ease;
-            //transition: opacity 1s ease;
-            //transition-delay: 0.2s; /* délai avant le début de la transition 
-            
-            // ajoutez d'autres propriétés CSS si nécessaire
-
-            @keyframes fadein {
-                from{
-                    opacity: 0;
-                }
-                to{
-                    opacity: 1;
-                }
-            }
-
-        // modifier les sélecteurs selon votre structure HTML
-        &:nth-child(1) .container_menu--bloctext {
-            animation-delay: 0.2s;
-            
-          }
-          
-          &:nth-child(2) .container_menu--bloctext {
-            animation-delay: 0.4s;
-            
-          }
-          
-          &:nth-child(3) .container_menu--bloctext {
-            animation-delay: 0.6s;
-           
-          }
-          
-          &:nth-child(4) .container_menu--bloctext {
-            animation-delay: 0.8s;
-            
-          }
-          
-          &:nth-child(5) .container_menu--bloctext {
-            animation-delay: 1s;
-            
-          }
-          
-          // ajoutez d'autres sélecteurs si nécessaire
-        }
-              
-            h4 {
-                font-size: 17px;
-            }
-            
-            .price {
-                display: flex;
-                position: absolute;
-                right: 20px;
-                bottom: 10px;
-                font-family: 'roboto';
-                font-weight: 700;
-            }
-        }
-    }
-
-.bloc_button {
-    display: flex;
-    justify-content: center;
-}
- */
-
-

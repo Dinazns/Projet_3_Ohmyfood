@@ -13,18 +13,18 @@ header {
         gap: 20px;
 
         font-size: 20px;
-        background-color: #eaeaea;
+        background-color: $clr-primary;
         
         box-shadow: inset 0 4px 8px rgba(128, 128, 128, 0.486);
         
         i {
-            color: #353535;
+            color: $clr-dark;
         }
 
         p {
             font-family: 'Roboto';
             font-weight: 500;
-            color: #353535;
+            color: $clr-dark;
             
         }
     }
@@ -38,7 +38,7 @@ header {
         width: 100%;
         padding: 50px 0 80px;
         gap: 10px;
-        background-color: #f6f6f6;
+        background-color: $clr-menu;
 
         h1 {
             font-size: 30px;
@@ -52,7 +52,6 @@ header {
             font-size: 20px;
         }
     }
-
 }
 
 .container__functionning {
@@ -62,7 +61,6 @@ header {
         padding: 50px 20px 35px;
         font-size: 26px;
     }
-
 }
 
 .container__functionning--button {   
@@ -73,23 +71,30 @@ header {
     width: 100%;
     gap: 30px;
 
+    @include tab-only {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    @include desktop-only {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     li {
-        position: relative;
-       
+        position: relative;       
         padding: 30px 25px 30px;
         max-width: 400px;
-        width: 100%;
-        
+        width: 100%;        
         border-radius: 20px;
-
-        background-color: #f6f6f6;
+        background-color: $clr-menu;
         box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
         
         a {
-            display: flex;
-            
-            align-items: center;
-            
+            display: flex;            
+            align-items: center;            
             gap: 25px;
            
             p {
@@ -107,12 +112,10 @@ header {
                 color: grey;
             }
         }
-
     }
     
     .functionning--button--number {
         position: absolute;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -120,22 +123,21 @@ header {
         width: 25px;
         height: 25px;
         left: -10px;
-
         font-size: 13px;
         border-radius: 50%;
-        background-color: #9356dc;
-        color: white;
+        background-color: $clr-menu_number_icon;
+        color: $clr-secondary;
     }
 }
 
 .container__functionning--button li:hover {
-    background: #f5edff;
+    background:$clr-menu_hover;
 }
     
 .container__restaurants {
     display: flex;
     flex-direction: column;
-    background-color: #f6f6f6;
+    background-color: $clr-menu;
     gap:25px;
 
     h2 {
@@ -145,29 +147,67 @@ header {
 
     .container__restaurants--global {
         margin-bottom: 30px;
-
+        
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 30px;
+
+        a {
+            display: flex;
+            justify-content: center;
+            padding: 25px;
+            width: 100%;
+
+            @include tab-only {
+                width: 45%;
+            }
+
+            @include desktop-only {
+                width: 45%;
+            }
+
+        }  
+
+        @include tab-only {   
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;         
+        }
+
+        @include desktop-only {  
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;           
+        }
 
         .container__restaurants--cards {
             display: flex;
             position: relative;
             flex-direction: column;
-            max-width: 400px;
-            width: 100%;   
-            height: 293px;        
-            
-            border-radius: 25px;       
-            
-            background-color: white;
+         
+            width: 100%;
+            border-radius: 25px;              
+            background-color: $clr-secondary;
             box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
-            gap: 15px;    
+            gap: 15px;  
+            
+            
+            @include desktop-only {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            @include tab-only {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
     
             img {
-                max-height: 201px;     
-                               
+                max-height: 163px; 
+                    
+                width: 100%;
                 object-fit: cover;
                 border-top-right-radius: 25px;
                 border-top-left-radius: 25px;
@@ -178,7 +218,7 @@ header {
                 justify-content: space-between;
                 color: black;
                 padding: 5px 25px 20px;
-                width: 310px;
+                width: 100%;
 
                 h3{
                     font-size: 22px;
@@ -200,8 +240,8 @@ header {
                 padding: 10px 17px 10px;
 
                 border-radius: 5px;
-                background-color: #99e2d0;  
-                color: #008766;
+                background-color: $clr-tertiary;  
+                color: $clr-newbox_text;
                 font-family: 'roboto';
                 font-weight: 500;         
             }

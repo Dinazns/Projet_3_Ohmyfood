@@ -1,7 +1,7 @@
 footer{
     display: flex;
     flex-direction: column;
-    position: static;
+    
     padding: 25px 25px 25px;
     gap: 10px;
     background-color:#353535;
@@ -12,6 +12,12 @@ footer{
         font-weight: 300;
         font-size: 22px;
         padding-bottom: 15px;
+
+        @include desktop-only {
+            display: flex;
+          
+            
+        }
     }
 
     .footer__proposition {
@@ -22,5 +28,13 @@ footer{
     .footer__partenariat {
         display: flex;
         gap: 10px;
+    }
+
+    @include desktop-only {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 60px 60px 10px;
+        
     }
 }
