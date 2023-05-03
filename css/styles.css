@@ -70,7 +70,7 @@ li {
   right: 0;
   top: 0;
   width: 60px;
-  height: 64px;
+  height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99e2d0;
@@ -118,17 +118,29 @@ nav a img {
 
 footer {
   display: flex;
+  position: relative;
   flex-direction: column;
   padding: 25px 25px 25px;
   gap: 10px;
   background-color: #353535;
   color: white;
 }
+@media screen and (min-width: 991px) {
+  footer {
+    align-items: center;
+  }
+}
 footer h3 {
+  display: flex;
   font-family: "Shrikhand";
   font-weight: 300;
   font-size: 22px;
-  padding-bottom: 15px;
+}
+@media screen and (min-width: 991px) {
+  footer h3 {
+    position: absolute;
+    right: 30px;
+  }
 }
 footer .footer__proposition {
   display: flex;
@@ -143,8 +155,12 @@ footer .footer__partenariat {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    padding: 60px 60px 10px;
+    padding: 60px 160px 10px;
   }
+}
+footer a {
+  text-decoration: none;
+  color: #eaeaea;
 }
 
 .loader {
@@ -356,6 +372,9 @@ header .page__top--title p {
 .container__functionning--button li:hover {
   background: #f5edff;
 }
+.container__functionning--button li:hover i {
+  color: #9356dc;
+}
 
 .container__restaurants {
   display: flex;
@@ -378,22 +397,9 @@ header .page__top--title p {
   padding: 25px;
   width: 100%;
 }
-@media screen and (min-width: 767px) {
-  .container__restaurants .container__restaurants--global a {
-    width: 45%;
-  }
-}
 @media screen and (min-width: 991px) {
   .container__restaurants .container__restaurants--global a {
     width: 45%;
-  }
-}
-@media screen and (min-width: 767px) {
-  .container__restaurants .container__restaurants--global {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }
 @media screen and (min-width: 991px) {
@@ -415,13 +421,6 @@ header .page__top--title p {
   gap: 15px;
 }
 @media screen and (min-width: 991px) {
-  .container__restaurants .container__restaurants--global .container__restaurants--cards {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-}
-@media screen and (min-width: 767px) {
   .container__restaurants .container__restaurants--global .container__restaurants--cards {
     display: flex;
     flex-wrap: wrap;
@@ -535,7 +534,7 @@ header img {
   font-size: 25px;
 }
 .container_allmenu .container_allmenu--top i {
-  margin-right: -20px;
+  right: 15px;
   font-size: 25px;
 }
 @media screen and (min-width: 991px) {
@@ -651,21 +650,23 @@ header img {
 .container_menu .container_menu--bloctext {
   cursor: pointer;
   display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
   border-radius: 20px;
-  gap: 5px;
+  gap: 10px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
+}
+.container_menu .container_menu--bloctext .container_pp {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 .container_menu .container_menu--bloctext h4, .container_menu .container_menu--bloctext p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  opacity: 0;
-  transform: translateY(-15px);
-  animation: fadein 1s 1.5s ease-out forwards;
 }
 @keyframes fadein {
   0% {
@@ -681,9 +682,9 @@ header img {
 }
 .container_menu .container_menu--bloctext .price {
   display: flex;
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
+  width: 20%;
+  background: red;
+  padding-top: 20px;
   font-family: "roboto";
   font-weight: 700;
 }

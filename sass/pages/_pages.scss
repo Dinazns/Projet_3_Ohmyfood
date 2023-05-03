@@ -10,13 +10,11 @@ header nav{
         font-size: 20px;
     }
 
-    a i {
-        
+    a i {        
             display: flex;
             position: absolute;
             left: 0;
-            padding-left: 35px;
-        
+            padding-left: 35px;        
     }
 }
 
@@ -72,7 +70,7 @@ header img {
         }
 
         i {
-            margin-right: -20px;
+            right: 15px;
             font-size: 25px;
         }
 
@@ -86,8 +84,7 @@ header img {
             margin: auto;
             width: 30%;
             }
-        }
-        
+        }        
     }
 
     .container_menu:nth-child(2) {
@@ -198,22 +195,25 @@ header img {
         .container_menu--bloctext {
             cursor: pointer;           
             display: flex;
-            flex-direction: column;
-            position: relative;
-            padding: 10px;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            padding: 15px;
             border-radius: 20px;
-            gap: 5px;
+            gap: 10px;
             background-color: $clr-secondary; 
             box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
+
+            .container_pp {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+            }
             
             h4, p {
                 white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
-                
-                opacity: 0;
-                transform: translateY(-15px);                
-                animation: fadein 1s 1.5s ease-out forwards;   
+                text-overflow: ellipsis;                  
             }
 
             @keyframes fadein{
@@ -233,10 +233,10 @@ header img {
             
             .price {
                 display: flex;
-                position: absolute;
-                right: 20px;
-                bottom: 10px;
-                font-family: 'roboto';
+                width: 20%;
+                background: red;
+                padding-top: 20px;
+                font-family: "roboto";
                 font-weight: 700;
             }
         }

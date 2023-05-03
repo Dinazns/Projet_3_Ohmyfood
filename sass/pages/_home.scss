@@ -132,6 +132,10 @@ header {
 
 .container__functionning--button li:hover {
     background:$clr-menu_hover;
+
+    i {
+        color: $clr-menu_number_icon;
+    }
 }
     
 .container__restaurants {
@@ -157,22 +161,11 @@ header {
             padding: 25px;
             width: 100%;
 
-            @include tab-only {
-                width: 45%;
-            }
-
             @include desktop-only {
                 width: 45%;
             }
 
         }  
-
-        @include tab-only {   
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;         
-        }
 
         @include desktop-only {  
             display: flex;
@@ -192,13 +185,7 @@ header {
             box-shadow: 0 4px 8px rgba(128, 128, 128, 0.486);
             gap: 15px;  
             
-            
             @include desktop-only {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-            }
-            @include tab-only {
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
