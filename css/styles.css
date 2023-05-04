@@ -58,44 +58,38 @@ li {
   -webkit-background-clip: text;
 }
 
+.container_menu--bloctext {
+  overflow: hidden;
+}
 .container_menu--bloctext i {
   display: none;
 }
 .container_menu--bloctext .greenside {
-  visibility: hidden;
   display: flex;
   position: absolute;
   justify-content: center;
   align-items: center;
   right: 0;
   top: 0;
-  width: 60px;
+  width: 0px;
   height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99e2d0;
+  transition: all ease-in 0.3s;
 }
 .container_menu--bloctext .price {
-  transition: all 0.2s;
+  transition: all ease-in 0.3s;
 }
 
 .container_menu--bloctext:hover {
   position: relative;
 }
 .container_menu--bloctext:hover .greenside {
-  visibility: visible;
-  animation: sidemouv 0.3s;
-}
-@keyframes sidemouv {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 60px;
-  }
+  width: 60px;
 }
 .container_menu--bloctext:hover .price {
-  transform: translateX(-50px);
+  transform: translateX(-60px);
 }
 .container_menu--bloctext:hover i {
   display: flex;
