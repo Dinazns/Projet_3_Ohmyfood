@@ -3,9 +3,3 @@
     @content;
   }
 }
-
-@mixin tab-only {
-  @media screen and (min-width: map-get($breakpoint, tab)) {
-    @content;
-  }
-}
