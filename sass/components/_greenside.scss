@@ -1,31 +1,42 @@
 .container_menu--bloctext {
+	overflow: hidden;
+
 	i {
 		display: none;
 	}
 
 	.greenside {
-		visibility: hidden;
 		display: flex;
 		position: absolute;
 		justify-content: center;
 		align-items: center;
 		right: 0;
 		top: 0;
-		width: 60px;
+		width: 0px;
 		height: 100%;
 		border-top-right-radius: 15px;
 		border-bottom-right-radius: 15px;
 		background-color: #99e2d0;
+<<<<<<< HEAD
 		animation: sidemouv 0.3s;
 	}
 
 	
+=======
+		transition: all ease-in .3s;
+	}
+
+	.price {
+		transition: all ease-in .3s;
+	}
+>>>>>>> d9470a8a1634b3f4aa7bcb08e2918fee092696df
 }
 
 .container_menu--bloctext:hover {
 	position: relative;
 
 	.greenside {
+<<<<<<< HEAD
 		visibility: visible;
 		// animation: sidemouv 0.3s;
 	}
@@ -38,10 +49,13 @@
 		100% {
 			width: 60px;
 		}
+=======
+		width: 60px;
+>>>>>>> d9470a8a1634b3f4aa7bcb08e2918fee092696df
 	}
 
 	.price {
-		transform: translateX(-50px);
+		transform: translateX(-60px);
 	}
 
 	i {
