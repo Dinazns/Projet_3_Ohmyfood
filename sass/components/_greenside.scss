@@ -17,26 +17,19 @@
 		border-top-right-radius: 15px;
 		border-bottom-right-radius: 15px;
 		background-color: #99e2d0;
-		animation: sidemouv 0.3s;
-	}	
+		transition: all ease-in .3s;
+	}
+
+	.price {
+		transition: all ease-in .3s;
+	}
 }
 
 .container_menu--bloctext:hover {
 	position: relative;
 
 	.greenside {
-		visibility: visible;
-		// animation: sidemouv 0.3s;
-	}
-
-	@keyframes sidemouv {
-		0% {
-			width: 0px;
-		}
-
-		100% {
-			width: 60px;
-		}
+		width: 60px;
 	}
 
 	.price {
