@@ -191,6 +191,12 @@ header img {
         width: 70%;
     }
 
+    h3 {
+        font-family: 'Roboto';
+        width: 1.3cm;
+        border-bottom: 3px solid $clr-tertiary;
+    }
+
     .container_menu--bloc {
         position: relative;
         display: flex;
@@ -198,11 +204,6 @@ header img {
         justify-content: space-between;
         gap: 10px;
 
-        h3 {
-            font-family: 'Roboto';
-            width: 1.3cm;
-            border-bottom: 3px solid $clr-tertiary;
-        }
     }
 
     .container_menu--bloctext {

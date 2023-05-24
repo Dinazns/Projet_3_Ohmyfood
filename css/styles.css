@@ -627,17 +627,17 @@ header img {
     width: 70%;
   }
 }
+.container_menu h3 {
+  font-family: "Roboto";
+  width: 1.3cm;
+  border-bottom: 3px solid #99e2d0;
+}
 .container_menu .container_menu--bloc {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-}
-.container_menu .container_menu--bloc h3 {
-  font-family: "Roboto";
-  width: 1.3cm;
-  border-bottom: 3px solid #99e2d0;
 }
 .container_menu .container_menu--bloctext {
   cursor: pointer;
