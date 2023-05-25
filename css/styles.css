@@ -62,7 +62,16 @@ li {
   overflow: hidden;
 }
 .container_menu--bloctext i {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  color: #99e2d0;
+  transition: all ease-in 0.3s;
+  opacity: 0;
 }
 .container_menu--bloctext .greenside {
   display: flex;
@@ -92,14 +101,7 @@ li {
   transform: translateX(-60px);
 }
 .container_menu--bloctext:hover i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: white;
-  color: #99e2d0;
+  opacity: 1;
 }
 
 nav {
