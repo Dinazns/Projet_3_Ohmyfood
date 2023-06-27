@@ -76,16 +76,6 @@ header img {
             width: 300px;
         }
     }
-
-    @media screen and (max-width: 1250px) {
-        @include desktop-only {
-            .container_allmenu--top {
-                h2 {
-                    width: 200px;
-                }
-            }
-        }
-    }
 }
 
 .container_menu:nth-child(2) {

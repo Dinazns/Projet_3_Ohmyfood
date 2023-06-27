@@ -28,13 +28,11 @@
 }
 
 .letter {
-    font-family: "Shrikhand";
-    
+    font-family: "Shrikhand";    
     color: violet;
-    font-size: 80px;
+    font-size: 30px;
     letter-spacing: 15px;
-    animation: neon 2s linear infinite;
-   
+    animation: neon 2s linear infinite;   
 }
 
 @keyframes neon {
@@ -44,24 +42,24 @@
     }
     
     50%{
-        font-size: 50px;
+        font-size: 30px;
     }
 
     70% {
         color:rgb(182, 112, 182);
         text-shadow: none;
-        font-size: 100px;
+        font-size: 50px;
     }
 
     90% {
-        font-size: 200px;
+        font-size: 50px;
     }
 
     100% {
         color:pink;
         opacity: 0;
         text-shadow: 0 0 7px pink;
-        font-size:  50px;
+        font-size:  30px;
         background-color: transparent;
     }
 }
